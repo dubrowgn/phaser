@@ -126,6 +126,20 @@ Phaser.Point.prototype = {
     },
 
     /**
+    * Scales both Point.x and Point.y by the given scalar value.
+    * @method Phaser.Point#scale
+    * @param {number} scalar - The value to scale both Point.x and Point.y by.
+    * @return {Phaser.Point} This Point object. Useful for chaining method calls.
+    */
+    scale: function (scalar) {
+
+        this.x *= scalar;
+        this.y *= scalar;
+        return this;
+
+    },
+
+    /**
     * Clamps the x value of this Point to be between the given min and max.
     * @method Phaser.Point#clampX
     * @param {number} min - The minimum value to clamp this Point to.
